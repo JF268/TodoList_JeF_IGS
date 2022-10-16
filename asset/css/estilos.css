@@ -1,0 +1,33 @@
+/* Reestrablecemos los valores para el diseño css*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+/* a la clase fondo de daremos una altura de la vista para que recubra toda la pantalla de la pagina */
+.fondo{
+    min-height: 100vh;
+}
+
+/*Color de fondo para el nav bar*/
+.fondo_menu{
+    background-color: cadetblue;
+}
+
+/*diseño de los botones de la clase "boton" con efecto hover para (login y registrar)*/
+.boton{
+    color:white;
+    border: 1px solid white;
+    margin-left: 15px;
+    text-decoration: none;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: .2s;
+}
+
+.boton:hover{
+    border:1px solid black;
+    color: black;
+
+}
