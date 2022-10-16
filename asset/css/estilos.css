@@ -29,5 +29,56 @@
 .boton:hover{
     border:1px solid black;
     color: black;
+}
 
+
+/*editando estilos al login*/
+.fondo-login{
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.login{
+    color:white;
+    margin:auto;
+    border: 1px solid grey;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: rgb(51, 47, 47);
+}
+
+/* estilos a la clase icono y el titulo*/
+
+.icono, .titulo{
+    text-align: center;
+    color: black;
+}
+
+.titulo{
+    margin-bottom: 12px;
+}
+
+.icono .dog-icon{
+    font-size: 50px;
+    margin-bottom: 10px;
+    color:  black;
+}
+
+/*estilo para el icono "ojo" para la contraseña*/
+.box-eye{
+    position: relative;
+}
+/*boton convertido en type=buton para que no envie nada*/
+.box-eye button{
+    border:none;
+    position:absolute;
+}
+/*clase para contraseña y estilo*/
+.changePassword{
+    position: absolute;
+    top:12px;
+    left: 400px;
+    color: rgb(51, 47, 47);
+    cursor:pointer;
 }

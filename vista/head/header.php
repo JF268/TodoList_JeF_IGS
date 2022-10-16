@@ -21,8 +21,8 @@
               </li>
             </ul>
             <!--Crearemos dos botones para el login de usuario y para registrar uno nuevo -->
-            <a href="/ToDoList_JF_IGS/home/login.php" class="boton">Iniciar Sesion</a>
-            <a href="/ToDoList_JF_IGS/home/registrar.php" class="boton">¿No tienes cuenta? !Registrate!</a>
+            <a href="/ToDoList_JF_IGS/vista/home/login.php" class="boton">Iniciar Sesion</a>
+            <a href="/ToDoList_JF_IGS/vista/home/registrar.php" class="boton">¿No tienes cuenta? !Registrate!</a>
           </div>
         </div>
       </nav>
