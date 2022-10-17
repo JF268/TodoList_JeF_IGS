@@ -6,7 +6,7 @@
 <div class="fondo-login">
     <div class="icono">
         <a href="/ToDoList_JF_IGS/index.php">
-        <i class="fa-solid fa-shield-dog dog-icon"></i>
+        <i class="fa-solid fa-solid fa-cat cat-icon"></i>
         </a>
     </div>
     <div class="titulo">
@@ -14,12 +14,12 @@
     </div>
     <form action="verificar.php" method="POST" class="col-3 login" autocomplete="off">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
             <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             <!---div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div -->
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
 
             <div class="box-eye">
                 <button type="button" onclick="mostrarContraseña('password','eyepassword')">
@@ -29,7 +29,7 @@
             <input type="password" name="contraseña" class="form-control" id="password">
         </div>
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">!INICIAR!</button>
         </div>
     </form>
     <div class="col-3 login mt-3">
