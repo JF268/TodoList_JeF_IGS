@@ -6,7 +6,7 @@
 }
 
 body{
-    background: linear-gradient(red,blue);
+    background: linear-gradient(black,grey);
 }
 
 /* a la clase fondo de daremos una altura de la vista para que recubra toda la pantalla de la pagina */
@@ -28,6 +28,7 @@ body{
     padding: 6px 8px;
     border-radius: 8px;
     transition: .2s;
+    font-family: 'Kanit', sans-serif, bold;
 }
 
 .boton:hover{
@@ -50,13 +51,16 @@ body{
     padding: 20px;
     border-radius: 6px;
     background-color: rgb(51, 47, 47);
+    font-family: 'Kanit', sans-serif;
 }
 
 /* estilos a la clase icono y el titulo*/
 
 .icono, .titulo{
     text-align: center;
-    color: black;
+    color:  white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 35px;
 }
 
 .titulo{
@@ -64,9 +68,9 @@ body{
 }
 
 .icono .cat-icon{
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 10px;
-    color:  black;
+    color: white;
 }
 
 /*estilo para el icono "ojo" para la contraseña*/

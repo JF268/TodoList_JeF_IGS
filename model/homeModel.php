@@ -1,3 +1,5 @@
+
+<!-- En aqui crearemos una clase que incluirá una función para poder hacer la insercion de usuarios y conectar a la base de datos --->
 <?php 
     class homeModel{
         private $PDO;
@@ -10,8 +12,6 @@
             $statement = $this->PDO->prepare("INSERT INTO tusuarios values(null,:correo, :password)");
             $statement -> bindParam(":correo",$correo);
             $statement -> bindParam(":correo",$correo);
-        }
-    
+        } 
     }
-
 ?>

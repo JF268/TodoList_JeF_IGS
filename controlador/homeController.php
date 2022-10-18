@@ -1,3 +1,5 @@
+
+<!--- en aqui construiremos una clases con funciones para poder limpiar los campos cuando se introduzcan los datos -->
 <?php 
     class homeController{
         private $MODEL;
@@ -8,7 +10,6 @@
         public function guardarUsuario($correo,$contraseña){
             $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarCorreo($correo),$this->encriptarContraseña($this->limpiarCadena($contraseña)));
             return $valor;
-
         }
         public function limpiarCadena($campo){
             $campo = strip_tags($campo);
@@ -22,6 +23,8 @@
             $campo = htmlspecialchars($campo);
             return $campo;
         }
+        // aqui tenemos una funcion para poder encriptar la contraseña y no se visualize en mysql 
+        // asi generamos la etica al desarrollar software y la confidencialidad
         public function encriptarContraseña(){
             return password_hash($contraseña,PASSWORD_DEFAULT);
         }
