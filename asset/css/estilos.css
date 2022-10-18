@@ -5,6 +5,10 @@
     box-sizing:border-box;
 }
 
+body{
+    background: linear-gradient(red,blue);
+}
+
 /* a la clase fondo de daremos una altura de la vista para que recubra toda la pantalla de la pagina */
 .fondo{
     min-height: 100vh;
@@ -34,7 +38,7 @@
 
 /*editando estilos al login*/
 .fondo-login{
-    background-color: blanchedalmond;
+    background-color: linear-gradient(blue,red);
     min-height: 100vh;
     padding-top: 50px;
 }
