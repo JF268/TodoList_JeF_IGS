@@ -11,6 +11,21 @@
     if(empty($correo) || empty($named2) || empty($contraseña) || empty($confirmarContraseña)){
         $error .= "<li>Completa los campos</li>"; // nos imprime un listado para llenar los campos
         header("Location: registrar.php?error=".$error."&&correo=".$correo."&&named2".$named2."&&contraseña".$contraseña."&&confirmarContraseña".$confirmarContraseña); // propiedad header para redirigirnos al formulario de registro mediante el metodo GET
+        // en otro caso si, los campos estan llenos, verificamos las contraseñas
+    } else if($correo && $named2 && $contraseña && $confirmarContraseña){
+        if($contraseña == $confirmarContraseña){
+            // si en este caso funciona entonces guardamos el usuario
+            if($obj->guardarUsuario($nombre,$correo,$contraseña) == false){
+                $error .= "<li> El correo ingresado ya esta registrado.</li>";
+                header("Location: registrar.php?error=".$error."&&correo=".$correo."&&named2".$named2."&&contraseña".$contraseña."&&confirmarContraseña".$confirmarContraseña);
+            } else {
+                header("Location:login.php");
+            }
+        } else {
+            //si las contraseñas no coinciden invoacremos a la variable error para que tome un nuevo mensaje de alerta
+            $error .= "<li> Las contraseñas no coinciden</li>";
+            header("Location: registrar.php?error=".$error."&&correo=".$correo."&&named2".$named2."&&contraseña".$contraseña."&&confirmarContraseña".$confirmarContraseña);
+        }
     }
 
 ?>
