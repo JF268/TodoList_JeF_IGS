@@ -4,13 +4,13 @@
     class homeModel{
         private $PDO;
         public function __contruc(){
-            require_once("C://xampp/htdocs/ToDoList_JF_IGS/config/conec_bd.php");
+            require_once("ToDoList_JF_IGS/config/conec_bd.php");
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
         public function agregarUsuario($nombre,$correo,$password){
             //en esta función preparamos la consulta para insertar un nuevo usuario
-            $statement = $this->PDO->prepare("INSERT INTO tusuarios values(null,:nombres_completo,:correo,:password)");
+            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:nombres_completo,:correo,:password)");
             $statement -> bindParam(":nombres_completo",$nombre);
             $statement -> bindParam(":correo",$correo);
             $statement -> bindParam(":password",$password);
