@@ -8,6 +8,11 @@
             $this->MODEL = new homeModel();
         }
         public function guardarUsuario($nombre,$correo,$contraseña){
+            //echo $correo;
+             // imprimiendo la función de encriptación de contraseña
+            //echo $this->encriptarContraseña($contraseña);
+            //echo $this->escriptarContraseña($contraseña);
+            die();
             $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarNombre($nombre),$this->limpiarCorreo($correo),$this->encriptarContraseña($this->limpiarCadena($contraseña)));
             return $valor;
         }
@@ -31,7 +36,7 @@
         }
         // aqui tenemos una funcion para poder encriptar la contraseña y no se visualize en mysql 
         // asi generamos la etica al desarrollar software y la confidencialidad
-        public function encriptarContraseña(){
+        public function encriptarContraseña($contraseña){
             return password_hash($contraseña,PASSWORD_DEFAULT);
         }
     }

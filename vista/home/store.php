@@ -15,7 +15,7 @@
     } else if($correo && $named2 && $contraseña && $confirmarContraseña){
         if($contraseña == $confirmarContraseña){
             // si en este caso funciona entonces guardamos el usuario
-            if($obj->guardarUsuario($nombre,$correo,$contraseña) == false){
+            if($obj->guardarUsuario($named2,$correo,$contraseña) == false){
                 $error .= "<li> El correo ingresado ya esta registrado.</li>";
                 header("Location: registrar.php?error=".$error."&&correo=".$correo."&&named2".$named2."&&contraseña".$contraseña."&&confirmarContraseña".$confirmarContraseña);
             } else {
