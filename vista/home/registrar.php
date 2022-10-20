@@ -18,12 +18,11 @@
             <input type="email" name="correo" class="form-control" placeholder="correo@example.com" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" placeholder="Escriba su nombre completo" aria-label="Username">
+            <label for="exampleInputName" class="form-label">Nombre Completo</label>
+            <input type="text"  name="nombre" class="form-control" placeholder="Escriba su nombre completo" id="exampleInputName" aria-label="Username">
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-
             <div class="box-eye">
                 <button type="button" onclick="mostrarContraseña('password','eyepassword')">
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>

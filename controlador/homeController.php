@@ -23,11 +23,16 @@
             $campo = htmlspecialchars($campo);
             return $campo;
         }
+        public function limpiarNombre($campo){
+            $campo = strip_tags($campo);
+            $campo = filter_var($campo, FILTER_SANITIZE_EMAIL);
+            $campo = htmlspecialchars($campo);
+            return $campo;
+        }
         // aqui tenemos una funcion para poder encriptar la contraseña y no se visualize en mysql 
         // asi generamos la etica al desarrollar software y la confidencialidad
         public function encriptarContraseña(){
             return password_hash($contraseña,PASSWORD_DEFAULT);
         }
     }
-
 ?>

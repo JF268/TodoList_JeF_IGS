@@ -8,10 +8,13 @@
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
-        public function agregarUsuario($correo,$password){
-            $statement = $this->PDO->prepare("INSERT INTO tusuarios values(null,:correo, :password)");
+        public function agregarUsuario($nombre,$correo,$password){
+            //en esta función preparamos la consulta para insertar un nuevo usuario
+            $statement = $this->PDO->prepare("INSERT INTO tusuarios values(null,:nombres_completo,:correo,:password)");
+            $statement -> bindParam(":nombres_completo",$nombre);
             $statement -> bindParam(":correo",$correo);
-            $statement -> bindParam(":correo",$correo);
+            $statement -> bindParam(":password",$password);
+            return ($statement->execute())? true: false;
         } 
     }
 ?>

@@ -2,7 +2,7 @@
     class db{
         //atributos de conexion a la base de datos (conexion modificada)
         private $host ="localhost";
-        private $dbname ="todolist";
+        private $dbname ="lista_tareas";
         private $user = "root";
         private $password ="";
         public function conexion(){
