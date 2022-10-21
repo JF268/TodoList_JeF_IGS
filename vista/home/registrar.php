@@ -20,11 +20,6 @@
         </div>
         <!-- nombre--->
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
-            <!--- name -->
-            <input type="text" name="named2" value="<?=(!empty($_GET['named2']))? $_GET['named2']:"" ?>" class="form-control" placeholder="Escriba su nombre completo" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             <div class="box-eye">
                 <!-- boton para ejecutar la instruccion en el archivo JS para visualizar la contraseña -->

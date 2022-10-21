@@ -1,20 +1,30 @@
 
 <!-- En aqui crearemos una clase que incluirá una función para poder hacer la insercion de usuarios y conectar a la base de datos --->
-<?php 
+<?php
     class homeModel{
         private $PDO;
-        public function __contruc(){
-            require_once("ToDoList_JF_IGS/config/conec_bd.php");
+        public function __construct()
+        {
+            require_once("C://xampp/htdocs/ToDoList_JF_IGS/config/conec_bd.php");
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
-        public function agregarUsuario($nombre,$correo,$password){
-            //en esta función preparamos la consulta para insertar un nuevo usuario
-            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:nombres_completo,:correo,:password)");
-            $statement -> bindParam(":nombres_completo",$nombre);
-            $statement -> bindParam(":correo",$correo);
-            $statement -> bindParam(":password",$password);
-            return ($statement->execute())? true: false;
-        } 
+        public function agregarNuevoUsuario($correo,$password){
+            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:correo, :password)");
+            $statement->bindParam(":correo",$correo);
+            $statement->bindParam(":password",$password);
+            try {
+                $statement->execute();
+                return true;
+            } catch (PDOException $e) {
+                return false;
+            }
+        }
+        public function obtenerclave($correo){
+            $statement = $this->PDO->prepare("SELECT password FROM usuarios WHERE correo = :correo");
+            $statement->bindParam(":correo",$correo);
+            return ($statement->execute()) ? $statement->fetch()['password'] : false;
+        }
     }
+
 ?>
