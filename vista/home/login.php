@@ -1,6 +1,11 @@
 <?php
     //Vamos a enlazar el archivo head.php
     require_once("C://xampp/htdocs/ToDoList_JF_IGS/vista/head/head.php");
+    //se verifica si no esta vacia una sesion con un usuario
+    if(!empty($_SESSION['usuario'])){
+        //mandar al panel.php (listado de tareas)
+        header("Location:panel.php") ;
+    }
 ?>
 
 <div class="fondo-login">

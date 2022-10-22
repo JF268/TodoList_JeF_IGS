@@ -3,7 +3,7 @@
 // trabajando con sesiones
      session_start();
      require_once("c://xampp/htdocs/ToDoList_JF_IGS/controlador/homeController.php");
-     $obj = new homeController();
+     $obj = new homeController();  // validación de la existencia de un usuario accediendo a las funciones de homeController
      $correo = $obj->limpiarcorreo($_POST['correo']);
      $contraseña = $obj->limpiarcadena($_POST['contraseña']);
      $bandera = $obj->verificarusuario($correo, $contraseña);

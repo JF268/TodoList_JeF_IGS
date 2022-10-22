@@ -11,19 +11,38 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- con un usuario sin logear --->
+          <?php if(empty($_SESSION['usuario'])) :?>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Mis tareas</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Mi perfil</a>
-              </li>
-            </ul>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"> Conoce de esta app</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Más info.</a>
+                </li>
+              </ul>
             <!--Crearemos dos botones para el login de usuario y para registrar uno nuevo -->
             <a href="/ToDoList_JF_IGS/vista/home/login.php" class="boton">Iniciar Sesion</a>
             <a href="/ToDoList_JF_IGS/vista/home/registrar.php" class="boton">¿No tienes cuenta? !Registrate!</a>
           </div>
+
+          <?php else :?>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Mis tareas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mi perfil</a>
+                </li>
+              </ul>
+            <!-- vista para usuario logeado con cerrar sesion -->
+            <a href="/ToDoList_JF_IGS/vista/home/logout.php" class="boton">Cerrar Sesión </a>
+          </div>
+          <?php endif ?>
         </div>
       </nav>
     </div>
