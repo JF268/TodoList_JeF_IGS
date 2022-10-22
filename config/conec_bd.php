@@ -3,7 +3,7 @@
 
         //variables para hacer la conexión con mysql
         private $host="localhost";
-        private $dbname="proy1";
+        private $dbname="db_prueba";
         private $user="root";
         private $password="";
         public function conexion(){

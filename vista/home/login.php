@@ -20,7 +20,7 @@
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-
+            <!-- contraseña --->
             <div class="box-eye">
                 <button type="button" onclick="mostrarContraseña('password','eyepassword')">
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
@@ -28,6 +28,12 @@
             </div>
             <input type="password" name="contraseña" class="form-control" id="password">
         </div>
+        <!-- intrucción php para accerder mediante metodo get a la variable error que almacena datos-->
+        <?php if(!empty($_GET['error'])):?>
+            <div id="alerta" style="margin:auto;" class="alert alert-danger mb-2" role="alert">
+                <?= !empty($_GET['error'])? $_GET['error']:"" ?>
+            </div>
+        <?php endif;?>
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary">!INICIAR!</button>
         </div>

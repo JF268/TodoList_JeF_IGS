@@ -8,8 +8,9 @@
             require_once("C://xampp/htdocs/ToDoList_JF_IGS/model/homeModel.php");
             $this->MODEL = new homeModel();
         }
-        public function guardarUsuario($correo,$contraseña){
-            $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarcorreo($correo),$this->encriptarcontraseña($this->limpiarcadena($contraseña)));
+        // pasando los parametros para guardar un usuario
+        public function guardarUsuario($correo,$nombre,$contraseña){
+            $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarcorreo($correo),$this->limpiarcadena($nombre),$this->encriptarcontraseña($this->limpiarcadena($contraseña)));
             return $valor;
         }
         public function limpiarcadena($campo){
@@ -28,6 +29,7 @@
         public function encriptarcontraseña($contraseña){
             return password_hash($contraseña,PASSWORD_DEFAULT);
         }
+        //pasando el correo y contraseña verificamos si existe
         public function verificarusuario($correo,$contraseña){
             $keydb = $this->MODEL->obtenerclave($correo);
             return (password_verify($contraseña,$keydb)) ? true : false;

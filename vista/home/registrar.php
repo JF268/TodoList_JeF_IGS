@@ -20,6 +20,12 @@
         </div>
         <!-- nombre--->
         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre Completo</label>
+            <!--- name -->
+            <input type="text" name="nombre" value="<?=(!empty($_GET['nombre']))? $_GET['nombre']:"" ?>" class="form-control" placeholder="Escriba su nombre completo" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <!--- contraseña --->
+        <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             <div class="box-eye">
                 <!-- boton para ejecutar la instruccion en el archivo JS para visualizar la contraseña -->
@@ -31,6 +37,7 @@
             <input type="password" name="contraseña" class="form-control" id="password">
         </div>
         <div class="mb-3">
+        <!--- repetir contraseña --->
             <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
 
             <div class="box-eye">
@@ -57,7 +64,6 @@
         Si tienes cuenta <a href="login.php" style="text-decoration:none">, Inicia Sesión</a>
     </div>
 </div>
-
 
 <?php
     //Vamos a enlazar el archivo footer
