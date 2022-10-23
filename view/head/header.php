@@ -11,7 +11,8 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <?php if(empty($_SESSION['usuario'])): ?>
+                <?php if(empty($_SESSION['usuario'])): // si la sesión se encuentra vacia, visualizaremos el apartado sin logearse ?>
+                    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -24,7 +25,7 @@
                     <a href="/ToDoList_JF_IGS/view/home/login.php" class="boton">Inicia Session</a>
                     <a href="/ToDoList_JF_IGS/view/home/signup.php" class="boton">Registrate</a>
                 </div>
-                <?php else: ?>
+                <?php else: // de ser el caso contrario, si existe un usuario logeado, tendremos la otra vista del header con usuario ?>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -40,7 +41,6 @@
                     <a href="/ToDoList_JF_IGS/view/home/logout.php" class="boton">Cerrar Sesion</a>
                 </div>
                 <?php endif ?>
-
             </div>
         </nav>
     </div>

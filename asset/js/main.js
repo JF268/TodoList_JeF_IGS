@@ -1,3 +1,5 @@
+
+/* crearemos la funcion para mostrar la contraseña y tambien inviertiendo el icono de boostrap(click)*/
 function mostrarContraseña(idPassword, idIcon){
     let inputPassword = document.getElementById(idPassword);
     let icon = document.getElementById(idIcon);

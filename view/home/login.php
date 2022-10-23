@@ -1,5 +1,6 @@
 <?php
     require_once("c://xampp/htdocs/ToDoList_JF_IGS/view/head/head.php");
+    // comprobamos si en la variable sesion no se encuentra "vacia" entonces mandamos al login para acceder
     if(!empty($_SESSION['usuario'])){
         header("Location:panel_control.php");
     }
@@ -16,6 +17,7 @@
     </div>
     <form action="verificar.php" method="POST" class="col-3 login" autocomplete="off">
         <div class="mb-3">
+            <!-- input de email para iniciar sesión -->
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
@@ -26,6 +28,7 @@
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
                 </button>
             </div>
+            <!-- input de contraseña -->
             <input type="password" name="contraseña" class="form-control" id="password">
         </div>
         <?php if(!empty($_GET['error'])):?>

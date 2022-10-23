@@ -1,4 +1,5 @@
 <?php
+    // trabajando con sesiones
     require_once("c://xampp/htdocs/ToDoList_JF_IGS/controller/homeController.php");
     session_start();
     $obj = new homeController();
@@ -8,7 +9,7 @@
     if($bandera){
         $_SESSION['usuario'] = $correo;
         header("Location:panel_control.php");
-    }else{
+    }else{ // mandaremos el error en el archivo php en el login
         $error = "<li>Las claves son incorrectas</li>";
         header("Location:login.php?error=".$error);
     }
