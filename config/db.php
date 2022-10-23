@@ -1,9 +1,7 @@
 <?php
     class db{
-
-        //variables para hacer la conexión con mysql
         private $host="localhost";
-        private $dbname="db_prueba";
+        private $dbname="practica1";
         private $user="root";
         private $password="";
         public function conexion(){

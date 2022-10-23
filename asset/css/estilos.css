@@ -1,92 +1,69 @@
-/* Reestrablecemos los valores para el diseño css*/
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 body{
-    background: linear-gradient(black,grey);
+    background: linear-gradient(black, cadetblue);
 }
-
-/* a la clase fondo de daremos una altura de la vista para que recubra toda la pantalla de la pagina */
 .fondo{
     min-height: 100vh;
 }
-
-/*Color de fondo para el nav bar*/
 .fondo_menu{
-    background-color: cadetblue;
+    background-color: #212529;
 }
-
-/*diseño de los botones de la clase "boton" con efecto hover para (login y registrar)*/
 .boton{
-    color:white;
+    color: white;
     border: 1px solid white;
     margin-left: 15px;
     text-decoration: none;
     padding: 6px 8px;
     border-radius: 8px;
     transition: .2s;
-    font-family: 'Kanit', sans-serif, bold;
 }
-
 .boton:hover{
-    border:1px solid black;
-    color: black;
+    border: 1px solid gray;
+    color: gray;
 }
-
-
-/*editando estilos al login*/
 .fondo-login{
-    background-color: linear-gradient(blue,red);
+    background-color: rgba(0, 0, 0, 0.938);
     min-height: 100vh;
     padding-top: 50px;
 }
-
 .login{
-    color:white;
-    margin:auto;
-    border: 1px solid grey;
+    color: white;
+    margin: auto;
+    border: 1px solid gray;
     padding: 20px;
     border-radius: 6px;
     background-color: rgb(51, 47, 47);
-    font-family: 'Kanit', sans-serif;
 }
-
-/* estilos a la clase icono y el titulo*/
-
-.icono, .titulo{
+.icon, .titulo{
     text-align: center;
-    color:  white;
-    font-family: 'Kanit', sans-serif;
-    font-size: 35px;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    font-size: 38px;
 }
-
 .titulo{
     margin-bottom: 12px;
 }
-
-.icono .cat-icon{
-    font-size: 60px;
+.icon .cat-icon{
+    font-size: 70px;
     margin-bottom: 10px;
     color: white;
 }
-
-/*estilo para el icono "ojo" para la contraseña*/
 .box-eye{
     position: relative;
 }
-/*boton convertido en type=buton para que no envie nada*/
 .box-eye button{
-    border:none;
-    position:absolute;
+    border: none;
+    position: absolute;
 }
-/*clase para contraseña y estilo*/
 .changePassword{
     position: absolute;
-    top:12px;
+    top: 12px;
     left: 400px;
     color: rgb(51, 47, 47);
-    cursor:pointer;
+    cursor: pointer;
 }
