@@ -18,11 +18,11 @@
     <form action="verificar.php" method="POST" class="col-3 login" autocomplete="off">
         <div class="mb-3">
             <!-- input de email para iniciar sesión -->
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
             <input type="email" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+        <div class="mb-3" style="font-family: 'Acme', sans-serif">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             <div class="box-eye">
                 <button type="button" onclick="mostrarContraseña('password','eyepassword')">
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
@@ -37,11 +37,11 @@
             </div>
         <?php endif;?>
         <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-outline-danger">¡Acceder!</button>
         </div>
     </form>
-    <div class="login col-3 mt-3">
-        ¿No tienes cuenta? <a href="signup.php" style="text-decoration: none;">Create una cuenta</a>
+    <div class="login col-3 mt-3" style="font-family: 'Acme', sans-serif">
+        ¿No tienes cuenta? <a href="signup.php" style="text-decoration: none; color:red">Crea una cuenta</a>
     </div>
 </div>
 

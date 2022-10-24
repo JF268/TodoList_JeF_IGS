@@ -5,11 +5,11 @@
     $obj = new homeController();
     $correo = $obj->limpiarcorreo($_POST['correo']);
     $contraseña = $obj->limpiarcadena($_POST['contraseña']);
-    $bandera = $obj->verificarusuario($correo,$contraseña);
-    if($bandera){
+    $advertencia = $obj->verificarusuario($correo,$contraseña);
+    if($advertencia = true){
         $_SESSION['usuario'] = $correo;
-        header("Location:panel_control.php");
-    }else{ // mandaremos el error en el archivo php en el login
+        header("Location:/ToDoList_JF_IGS/view/home/panel_control.php");
+    }else{
         $error = "<li>Las claves son incorrectas</li>";
         header("Location:login.php?error=".$error);
     }

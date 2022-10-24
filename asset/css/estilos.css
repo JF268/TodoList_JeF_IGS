@@ -5,7 +5,11 @@
 }
 
 body{
-    background: linear-gradient(black, cadetblue);
+    background: rgb(12,15,17);
+    background: -moz-linear-gradient(0deg, rgba(12,15,17,1) 8%, rgba(52,177,179,1) 55%);
+    background: -webkit-linear-gradient(0deg, rgba(12,15,17,1) 8%, rgba(52,177,179,1) 55%);
+    background: linear-gradient(0deg, rgba(12,15,17,1) 8%, rgba(52,177,179,1) 55%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0c0f11",endColorstr="#34b1b3",GradientType=1);
 }
 .fondo{
     min-height: 100vh;
@@ -32,6 +36,7 @@ body{
     padding-top: 50px;
 }
 .login{
+    font-family: 'Acme', sans-serif;
     color: white;
     margin: auto;
     border: 1px solid gray;

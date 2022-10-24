@@ -29,8 +29,8 @@
         }
         //pasando el correo y contraseña verificamos si existe un usuario para validar el ingreso
         public function verificarusuario($correo,$contraseña){
-            $keydb = $this->MODEL->obtenerclave($correo);
-            return (password_verify($contraseña,$keydb)) ? true : false;
+            $llavedb = $this->MODEL->obtenerclave($correo);
+            return (password_verify($contraseña,$llavedb)) ? true : false;
         }
     }
 ?>

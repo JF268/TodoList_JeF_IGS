@@ -2,7 +2,7 @@
     class db{
         //atributos de la conexión a la base de datos
         private $host="localhost";
-        private $dbname="practica1";
+        private $dbname="tareas_list";
         private $user="root";
         private $password="";
         // creaamos una función que contenga estos atributos para ser invocada posteriormente

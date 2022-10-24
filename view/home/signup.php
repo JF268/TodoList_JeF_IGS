@@ -15,12 +15,12 @@
         Crear una cuenta en JeFTodoList
     </div>
     <form action="store.php" method="POST" class="col-3 login" autocomplete="off">
-        <div class="mb-3">
+        <div class="mb-3" style="font-family: 'Acme', sans-serif">
             <!-- correo electrónico-->
             <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
             <input type="email" name="correo" value="<?= (!empty($_GET['correo'])) ? $_GET['correo'] : "" ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
-        <div class="mb-3">
+        <div class="mb-3" style="font-family: 'Acme', sans-serif">
             <!-- input de contraseña -->
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <div class="box-eye">
@@ -30,7 +30,7 @@
             </div>
             <input type="password" name="contraseña" value="<?= (!empty($_GET['contraseña'])) ? $_GET['contraseña'] : "" ?>" class="form-control" id="password">
         </div>
-        <div class="mb-3">
+        <div class="mb-3" style="font-family: 'Acme', sans-serif">
             <!-- input de  confirmación de contraseña -->
             <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
             <div class="box-eye">
@@ -47,12 +47,12 @@
                 <?= !empty($_GET['error']) ? $_GET['error'] : ""?>
             </div>
         <?php endif;?>
-        <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">CREAR CUENTA</button>
+        <div class="d-grid gap-2" style="font-family: 'Acme', sans-serif">
+            <button type="submit" class="btn btn-outline-success">CREAR CUENTA</button>
         </div>
     </form>
     <div class="login col-3 mt-3">
-        ¿Ya tienes cuenta? <a href="login.php" style="text-decoration: none;">Inicia Sesion</a>
+        ¿Ya tienes cuenta? <a href="login.php" style="text-decoration: none; color:green">Inicia Sesion</a>
     </div>
 </div>
 

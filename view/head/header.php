@@ -22,8 +22,8 @@
                             <a class="nav-link" href="#">Conoce esta app</a>
                         </li>
                     </ul>
-                    <a href="/ToDoList_JF_IGS/view/home/login.php" class="boton">Inicia Session</a>
-                    <a href="/ToDoList_JF_IGS/view/home/signup.php" class="boton">Registrate</a>
+                    <a href="/ToDoList_JF_IGS/view/home/login.php" class="boton">Iniciar Sesión</a>
+                    <a href="/ToDoList_JF_IGS/view/home/signup.php" class="boton">Registrate!</a>
                 </div>
                 <?php else: // de ser el caso contrario, si existe un usuario logeado, tendremos la otra vista del header con usuario ?>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,7 +38,7 @@
                             <a class="nav-link" href="#">¿Como optimizar mis tareas?</a>
                         </li>
                     </ul>
-                    <a href="/ToDoList_JF_IGS/view/home/logout.php" class="boton">Cerrar Sesion</a>
+                    <a href="/ToDoList_JF_IGS/view/home/logout.php" class="boton">Cerrar Sesión</a>
                 </div>
                 <?php endif ?>
             </div>
